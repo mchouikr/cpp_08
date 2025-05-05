@@ -6,7 +6,7 @@
 /*   By: mchouikr <mchouikr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 18:07:03 by mchouikr          #+#    #+#             */
-/*   Updated: 2025/05/01 18:32:41 by mchouikr         ###   ########.fr       */
+/*   Updated: 2025/05/05 12:19:55 by mchouikr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@
 #include <algorithm>
 #include <stdexcept>
 #include <list>
+#include <deque>
+#include <map>
+#include <set>
+
 
 template <typename T>
 

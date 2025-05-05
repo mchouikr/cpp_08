@@ -6,11 +6,14 @@
 /*   By: mchouikr <mchouikr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 18:14:50 by mchouikr          #+#    #+#             */
-/*   Updated: 2025/05/01 18:34:11 by mchouikr         ###   ########.fr       */
+/*   Updated: 2025/05/05 12:26:34 by mchouikr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easyfind.hpp"
+
+//easyfind works only with sequential containers (vector, deque, list)
+//does not work with associative containers (map, set) 
 
 int main() {
 
@@ -45,12 +48,31 @@ int main() {
 	numbers2.push_back(33);
 
 	try {
-		easyfind(numbers, 22);
-		std::cout << "Success" << std::endl;
+		easyfind(numbers2, 22);
+		std::cout << "List test: Success" << std::endl;
 	}
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
-	return 0;
 
+	std::cout << "-------------------" << std::endl;
+	std::cout << "Example with deque" << std::endl;
+	std::cout << "-------------------" << std::endl;
+
+	std::deque<int> numbers3;
+
+	numbers3.push_back(10);
+	numbers3.push_back(22);
+	numbers3.push_back(41);
+	numbers3.push_back(33);
+
+	try {
+		easyfind(numbers3, 22);
+		std::cout << "Deque test: Success" << std::endl;
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	return 0;
 }
